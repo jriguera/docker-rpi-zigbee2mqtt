@@ -157,9 +157,9 @@ $CHANGELOG
 
 ## Using it
 
-Given the docker image with name 'dozzle':
+Given the docker image with name 'jriguera/zigbee2mqtt':
 
-    docker run --name logging -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock -d jriguera/dozzle
+    docker run --name zigbee -e TZ=Europe/Amsterdam -e -v $(pwd)/config:/config -v /dev/ttyACM0:/dev/ttyACM0 -d jriguera/zigbee2mqtt
 
 EOF
 )
